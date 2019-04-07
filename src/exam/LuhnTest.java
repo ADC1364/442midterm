@@ -33,27 +33,27 @@ public class LuhnTest {
 	// test to get node coverage
 	@Test
 	public void test1() {
-		assertFalse(Luhn.check("15"));
+		assertFalse(Luhn.check("55"));
 	}
 
 	// test to get edge and decision coverage
 	@Test
 	public void test2() {
-		assertFalse(Luhn.check("152"));
+		assertTrue(Luhn.check("1255"));
 	}
 	
-	// test using my credit card number to  get the check method to return true
-	@Test
-	public void test3() {
-		assertTrue(Luhn.check(""));
-	}
-	
-	// test to check the sum and get above 90% mutation coverage in doing so.
+	// tests to check the sum and get above 90% mutation coverage in doing so.
 	@Test
 	public void test4() {
 		
 		assertFalse(Luhn.check("15"));
 		assertEquals(7, Luhn.num);
+	}
+	
+	// test on my credit card
+	@Test
+	public void test5() {
+		assertTrue(Luhn.check(""));
 	}
 	
 	

@@ -19,7 +19,8 @@ public class Q1Test {
 	// this test executes the fault but does not result in an error state or failure
 	@Test
 	public void test1() {
-		int [] a1 = {1,2,3,4,5};
+		int [] a1 = {};
+		assertTrue(a1.length == 0);
 		assertEquals(-1, Q1.lastZero(a1));
 	}
 	
